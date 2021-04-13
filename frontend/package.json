@@ -13,8 +13,10 @@
   },
   "main": "background.js",
   "dependencies": {
+    "@material-ui/icons": "^4.11.2",
     "core-js": "^3.6.5",
     "vue": "^2.6.11",
+    "vue-router": "^3.5.1",
     "vuetify": "^2.4.0"
   },
   "devDependencies": {

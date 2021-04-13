@@ -48,7 +48,7 @@
 <style scoped>
   #main-footer{
     bottom: 0;
-    position: abs;
+    position: absolute;
     width: 100%;
   }
   #sec-footer{

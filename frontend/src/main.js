@@ -35,7 +35,7 @@ const router = new VueRouter({
       component: TutorialComponent
     },
     {
-      path: '/retrieval',
+      path: '/retrieve',
       component: RetrievalComponent
     }
   ]
@@ -56,7 +56,6 @@ ipcRenderer.on('tutorial', ()  => {
 })
 
 ipcRenderer.on('analysis', ()  => {
-  console.log('abc')
   router.push('/analysis')
 })
 

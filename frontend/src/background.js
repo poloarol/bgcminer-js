@@ -111,7 +111,7 @@ const MenuTemplate = [
    ]
   },
   {
-    label: 'View',
+    label: 'About',
     submenu: [
       {
         label: 'BGC-Miner',

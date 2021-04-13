@@ -2,39 +2,21 @@
   <v-form v-model='valid' id='main-form'>
     <v-container>
       <v-row>
-        <v-text-field
-          v-model='email'
-          :rules = 'emailRules'
-          label = 'e-mail'
-          outlined
-          required
-        >
-        </v-text-field>
-      </v-row>
-      <v-row>
         <v-select
           :items='items'
           label='Models'
+          :rules="[v => !!v || 'Item is required']"
           outlined
         >
         </v-select>
       </v-row>
       <v-row>
-        <v-container fluid>
-          <v-textarea
-            v-model="bgc"
-            clearable
-            clear-icon='mdi-close-circle'
-            label='Biosynthetic Gene Cluster'
-            autoGrow
-          >
-          </v-textarea>
-        </v-container>
       </v-row>
       <v-row>
         <v-file-input
-          accept='.fasta, .gbk, .txt'
-          label='Fasta file'
+          accept='.gbk'
+          label='GenBank file'
+          multiple
           outlined
         >
         </v-file-input>
@@ -48,7 +30,7 @@
 
 <style scoped>
   #main-form {
-    margin-top: 2.5%;
+    margin-top: 7%;
   }
 </style>
 
@@ -95,6 +77,7 @@ export default{
     },
     submit(){
       this.validate()
+      console.log(this.valid)
     }
   }
 }
